@@ -7,7 +7,18 @@
 
   font-weight: normal;
 }
-
+.main_banner {
+  background-image: url(./main_banner.jpg);
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 a,
 .green {
   text-decoration: none;
