@@ -11,7 +11,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: auto;
+    height: 285px;
     position: absolute;
     top: 0;
     left: 0;
@@ -78,7 +78,26 @@
     border-radius: 10px;
     margin: 0 auto;
   }
+
+  &__full {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 205px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &_one-full {
+    background-image: url(../ekaterina.jpg);
+  }
+  &_two-full {
+    background-image: url(../ilnara.jpg);
+  }
+  &_three-full {
+    background-image: url(../lyzia.jpg);
+  }
 }
+
 
 a,
 .green {

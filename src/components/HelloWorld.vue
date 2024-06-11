@@ -1,9 +1,3 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
-</script>
-
 <template>
   <div class="header">
     <h1 class="header_title">{{ msg }}</h1>
@@ -12,6 +6,19 @@ defineProps<{
     </h3>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+    name: "HelloWorld",
+    props: {
+      msg: {
+            type: String,
+            required: true
+        },
+    },
+})
+</script>
 
 <style lang="scss" scoped>
 h1 {
