@@ -3,12 +3,15 @@ export {};
 
 declare global {
     namespace Telegram {
-        interface WebApp {
-            initData: string;
-            version: string;
-            // Добавьте здесь все другие свойства и методы, которые вы используете
-        }
+      interface WebApp {
+        initData: string;
+        version: string;
+        ready: () => void;
+        showAlert: (string) => void;
+        MainButton: any;
+        // Добавьте другие методы и свойства, которые вы используете
+      }
+  
+      const WebApp: WebApp;
     }
-
-    const Telegram: Telegram.WebApp;
-}
+  }

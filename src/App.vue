@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
 console.log(Telegram);
+Telegram.WebApp.ready();
+// Show main button
+        Telegram.WebApp.MainButton.setParams({
+            text: 'Main Button'
+        });
+        Telegram.WebApp.MainButton.onClick(function () {
+            Telegram.WebApp.showAlert('Main Button was clicked')
+        });	
+        Telegram.WebApp.MainButton.show();
 </script>
 
 <template>
