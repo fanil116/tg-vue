@@ -1,15 +1,14 @@
-@import "./base.css";
-
+@import "./base";
+@import "./variables";
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-
   font-weight: normal;
 }
-.main_banner {
-  background-image: url(./main_banner.jpg);
-  background-size: cover;
+.main {
+  &_banner {
+    background-image: url(../main_banner.jpg);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: auto;
@@ -18,7 +17,25 @@
     left: 0;
     right: 0;
     bottom: 0;
+    &::before {
+      display: block;
+      content: "";
+      height: 100%;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .48)), to(rgba(0, 0, 0, .64)));
+    }
+  }
 }
+
+.header {
+  padding: 15px;
+  &_title {
+    color:#fff;
+  }
+  &_subtitle {
+    color:#fff;
+  }
+}
+
 a,
 .green {
   text-decoration: none;

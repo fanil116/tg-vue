@@ -5,15 +5,15 @@ defineProps<{
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
+  <div class="header">
+    <h1 class="header_title">{{ msg }}</h1>
+    <h3 class="header_subtitle">
       В нашей студии Вы можете подчеркнуть свою красоту с помощью перманентного макияжа.
     </h3>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
