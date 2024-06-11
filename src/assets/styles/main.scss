@@ -36,6 +36,32 @@
   }
 }
 
+.master {
+  &_one {
+    background-image: url(../ekaterina.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100%;
+  }
+
+  &_two {
+    background-image: url(../ilnara.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100%;
+  }
+
+  &_three {
+    background-image: url(../lyzia.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100%;
+  }
+}
+
 a,
 .green {
   text-decoration: none;

@@ -21,8 +21,10 @@ Telegram.WebApp.ready();
         <HelloWorld msg="Перманентный макияж Казань" />
 
         <nav>
-          <router-link to="/">Home fucking</router-link>
-          <router-link to="/about">About</router-link>
+          <router-link to="/">Главная</router-link>
+          <router-link to="/about">Отзывы</router-link>
+          <router-link to="/about">Прайс</router-link>
+          <router-link to="/about">Контакты</router-link>
         </nav>
       </div>
     </header>

@@ -1,8 +1,8 @@
 <template>
   <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
+    <div class="item_image">
+      <slot name="image"></slot>
+    </div>
     <div class="details">
       <h3>
         <slot name="heading"></slot>
@@ -15,7 +15,11 @@
 <style scoped>
 .item {
   margin-top: 2rem;
-  display: flex;
+}
+
+.item_image {
+  width: 100%;
+  height: 350px;
 }
 
 .details {
