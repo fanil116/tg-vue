@@ -36,29 +36,47 @@
   }
 }
 
-.master {
+.masters {
+
+  &_title {
+    text-align: center;
+  }
+
+  &__wrapper {
+    display:flex;
+    justify-content: space-around;
+  }
   &_one {
-    background-image: url(../ekaterina.jpg);
+    background-image: url(../ekaterina_mini.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height:100%;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 0 auto;
   }
 
   &_two {
-    background-image: url(../ilnara.jpg);
+    background-image: url(../ilnara_mini.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height:100%;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 0 auto;
   }
 
   &_three {
-    background-image: url(../lyzia.jpg);
+    background-image: url(../lyzia_mini.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height:100%;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 0 auto;
   }
 }
 
