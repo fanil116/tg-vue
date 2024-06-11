@@ -37,7 +37,7 @@ export default Vue.extend({
   mounted() {
     // Show main button
         Telegram.WebApp.BackButton.setParams({
-            text: 'Записаться'
+            text: 'Назад'
         });
         Telegram.WebApp.BackButton.onClick(function () {
             Telegram.WebApp.showAlert('Не смотри еще не готово')
