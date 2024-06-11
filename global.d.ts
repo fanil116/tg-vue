@@ -9,6 +9,7 @@ declare global {
         ready: () => void;
         showAlert: (string) => void;
         MainButton: any;
+        BackButton: any;
         // Добавьте другие методы и свойства, которые вы используете
       }
   

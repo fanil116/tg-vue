@@ -33,6 +33,16 @@ export default Vue.extend({
       if (!this.masters) return null;
       return this.masters.find((master: Master) => master.id == parseInt(this.id)) || null;
     }
+  },
+  mounted() {
+    // Show main button
+        Telegram.WebApp.BackButton.setParams({
+            text: 'Записаться'
+        });
+        Telegram.WebApp.BackButton.onClick(function () {
+            Telegram.WebApp.showAlert('Не смотри еще не готово')
+        });	
+        Telegram.WebApp.BackButton.show();
   }
 });
 </script>
