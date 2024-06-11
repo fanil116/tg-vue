@@ -36,13 +36,16 @@ export default Vue.extend({
   },
   mounted() {
     // Show main button
-        Telegram.WebApp.BackButton.setParams({
+        Telegram.WebApp.MainButton.setParams({
             text: 'Назад'
         });
-        Telegram.WebApp.BackButton.onClick(function () {
-            Telegram.WebApp.showAlert('Не смотри еще не готово')
+        Telegram.WebApp.MainButton.onClick(() => {
+            this.$router.go(-1)
         });	
-        Telegram.WebApp.BackButton.show();
+        Telegram.WebApp.MainButton.show();
+  },
+  beforeDestroy() {
+    Telegram.WebApp.MainButton.hide();
   }
 });
 </script>
