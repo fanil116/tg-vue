@@ -1,10 +1,20 @@
 <template>
   <div>
     <div v-if="currentMaster">
-    <div :class="currentMaster.fullClass" class="masters__full"></div>
-    <h1>Master Detail</h1>
-    <p>ID: {{ id }}</p>
-    <p>{{currentMaster.name}}</p>
+      <div :class="currentMaster.fullClass" class="masters__full"></div>
+      <button>Прайс - {{currentMaster.name}}</button>
+      <button>Фото работ</button>
+      <!--<div class="masters__price price">
+        <div v-for="(service, index) in currentMaster.services" :key="index">
+          <img :src="getImagePath(service.img)" class="price__img" />
+          <p class="price__name">{{service.name}}</p>
+          <p class="price__price">{{service.price}}</p>
+        </div>
+      </div> -->
+      <div>
+        <div>Запись</div>
+        <iframe height="545px" width="320px" scrolling="no" frameborder="0" allowtransparency="true" id="ms_booking_iframe" src="https://n1163728.yclients.com"></iframe>
+      </div>
     </div>
     <div v-else>Loading</div>
   </div>
@@ -16,6 +26,7 @@ import { MastersStoreModule, GetterType as MastersGetterType,} from "@/store/mas
 import type {Master} from "@/models/masters"
 export default Vue.extend({
   name: 'MasterView',
+
   computed: {
     id(): string {
       return this.$route.params.id;
@@ -34,19 +45,28 @@ export default Vue.extend({
       return this.masters.find((master: Master) => master.id == parseInt(this.id)) || null;
     }
   },
+
+  methods: {
+    getImagePath(image: string): string {
+      try {
+        return `/tg-vue/src/assets/img/${image}`;
+      } catch (error) {
+        console.error("Error loading image:", error);
+        return '';
+      }
+    }
+  },
   mounted() {
     // Show main button
         Telegram.WebApp.MainButton.setParams({
             text: 'Назад'
         });
         Telegram.WebApp.MainButton.onClick(() => {
+          Telegram.WebApp.MainButton.hide();
             this.$router.go(-1)
         });	
         Telegram.WebApp.MainButton.show();
   },
-  beforeDestroy() {
-    Telegram.WebApp.MainButton.hide();
-  }
 });
 </script>
 

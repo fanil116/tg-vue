@@ -98,6 +98,20 @@
   }
 }
 
+.price {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 8px;
+    padding: 0 24px;
+
+  &__img {
+    max-height: 170px;
+    height:100%;
+    width:100%;
+    max-width: 170px;
+    border-radius: 10px;
+  }
+}
 
 a,
 .green {
