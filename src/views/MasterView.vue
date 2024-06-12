@@ -4,6 +4,7 @@
       <div :class="currentMaster.fullClass" class="masters__full"></div>
       <button>Прайс - {{currentMaster.name}}</button>
       <button>Фото работ</button>
+      <p>{{test}}</p>
       <!--<div class="masters__price price">
         <div v-for="(service, index) in currentMaster.services" :key="index">
           <img :src="getImagePath(service.img)" class="price__img" />
@@ -11,9 +12,9 @@
           <p class="price__price">{{service.price}}</p>
         </div>
       </div> -->
-      <div>
-        <div>Запись</div>
-        <iframe height="545px" width="320px" scrolling="no" frameborder="0" allowtransparency="true" id="ms_booking_iframe" src="https://n1163728.yclients.com"></iframe>
+      <div class="registration">
+        <div class="registration__title">Онлайн запись</div>
+        <iframe height="900px" width="320px" scrolling="no" frameborder="0" allowtransparency="true" id="ms_booking_iframe" src="https://n1163728.yclients.com"></iframe>
       </div>
     </div>
     <div v-else>Loading</div>
@@ -24,8 +25,19 @@
 import Vue from "vue";
 import { MastersStoreModule, GetterType as MastersGetterType,} from "@/store/masters/types/MastersStoreModule";
 import type {Master} from "@/models/masters"
+
+interface Data {
+    test: any;
+}
+
+
 export default Vue.extend({
   name: 'MasterView',
+   data(): Data {
+        return {
+          test: null
+        };
+    },
 
   computed: {
     id(): string {
@@ -57,6 +69,8 @@ export default Vue.extend({
     }
   },
   mounted() {
+    console.log(Telegram.WebApp.initDataUnsafe);
+    this.test = Telegram.WebApp.initDataUnsafe
     // Show main button
         Telegram.WebApp.MainButton.setParams({
             text: 'Назад'
