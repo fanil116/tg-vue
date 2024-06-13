@@ -4,8 +4,8 @@
             <Flicking  ref="flicking" :options="options">
                 <div v-for="(photo, index) in photos" class="flicking-panel slider__wrapper" :key="index"><img :src="getImagePath(photo.src)" class="slider__item"/></div>
             </Flicking>
-            <button @click="previos()">prev</button>
-            <button @click="next()">next</button>
+            <button @click="goPrev()">prev</button>
+            <button @click="goNext()">next</button>
         </div>
     </div>
 </template>
@@ -56,17 +56,18 @@ const PhotoModal = Vue.extend({
                 return '';
             }
         },
-        previos() {
-            
-            const index = this.$refs.flicking.getStatus().index;
+        goPrev() {
+            const flickingInstance = this.$refs.flicking as Flicking;
+            const index = flickingInstance.getStatus().index;
             if (index == 0) return
-            this.$refs.flicking.prev();
+            flickingInstance.prev();
         },
-        next() {
-            const index = this.$refs.flicking.getStatus().index;
-            const length = this.$refs.flicking.getStatus().panels.length
-            if (length - index == 1 || length - index == 0) return
-            this.$refs.flicking.next();
+        goNext() {
+            const flickingInstance = this.$refs.flicking as Flicking;
+            const index = flickingInstance.getStatus().index;
+            const length = flickingInstance.getStatus().panels.length
+            if (index && length - index == 1 || index && length - index == 0) return
+            flickingInstance.next();
         }
     },
 
