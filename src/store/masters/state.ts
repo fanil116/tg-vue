@@ -91,12 +91,12 @@ const state = (): State => ({
                 {
                     name: "Межресничка",
                     price: 5000,
-                    img: "ilnara/mejresnica.jpg"
+                    img: "/ilnara/mejresnica.jpg"
                 },
                 {
                     name: "Губы",
                     price: 8000,
-                    img: "ilnara/gubi.jpg"
+                    img: "/ilnara/gubi.jpg"
                 },
                 {
                     name: "Брови",
