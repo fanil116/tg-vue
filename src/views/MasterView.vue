@@ -12,6 +12,8 @@
           <p class="price__price">{{service.price}}</p>
         </div>
       </div> -->
+    <PhotoModal :currentMaster="currentMaster"/>
+
       <div class="registration">
         <div class="registration__title">Онлайн запись</div>
         <iframe height="900px" width="320px" scrolling="no" frameborder="0" allowtransparency="true" id="ms_booking_iframe" src="https://n1163728.yclients.com"></iframe>
@@ -25,6 +27,7 @@
 import Vue from "vue";
 import { MastersStoreModule, GetterType as MastersGetterType,} from "@/store/masters/types/MastersStoreModule";
 import type {Master} from "@/models/masters"
+import PhotoModal from '@/components/modals/PhotoModal.vue';
 
 interface Data {
     test: any;
@@ -33,6 +36,11 @@ interface Data {
 
 export default Vue.extend({
   name: 'MasterView',
+
+  components: {
+      PhotoModal,
+    },
+
    data(): Data {
         return {
           test: null

@@ -123,6 +123,21 @@
   }
 }
 
+.slider {
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    height: auto;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
 a,
 .green {
   text-decoration: none;

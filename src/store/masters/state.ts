@@ -42,6 +42,44 @@ const state = (): State => ({
                     price: 10000,
                     img: "/ekaterina/delete.jpg"
                 },
+            ],
+            works: [
+                {
+                    src: "/ekaterina/photo_work/one.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/two.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/three.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/four.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/five.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/six.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/seven.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/eight.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/nine.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/ten.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/eleven.jpg"
+                },
+                {
+                    src: "/ekaterina/photo_work/twelve.jpg"
+                }
             ]
         },
         {
@@ -65,6 +103,44 @@ const state = (): State => ({
                     price: 8000,
                     img: "/ilnara/brovi.jpg"
                 },
+            ],
+            works: [
+                {
+                    src: "/ilnara/photo_work/one.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/two.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/three.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/four.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/five.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/six.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/seven.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/eight.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/nine.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/ten.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/eleven.jpg"
+                },
+                {
+                    src: "/ilnara/photo_work/twelve.jpg"
+                }
             ]
         },
         {
@@ -83,6 +159,44 @@ const state = (): State => ({
                     price: 4500,
                     img: "/luiza/brovi.jpg"
                 },
+            ],
+            works: [
+                {
+                    src: "/luiza/photo_work/one.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/two.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/three.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/four.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/five.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/six.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/seven.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/eight.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/nine.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/ten.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/eleven.jpg"
+                },
+                {
+                    src: "/luiza/photo_work/twelve.jpg"
+                }
             ]
         }],
 });
