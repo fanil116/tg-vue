@@ -3,7 +3,7 @@
     <div v-if="currentMaster">
       <div :class="currentMaster.fullClass" class="masters__full"></div>
       <button>Прайс - {{currentMaster.name}}</button>
-      <button>Фото работ</button>
+      <button @click="displayPhoto">Фото работ</button>
       <p>{{test}}</p>
       <!--<div class="masters__price price">
         <div v-for="(service, index) in currentMaster.services" :key="index">
@@ -12,11 +12,11 @@
           <p class="price__price">{{service.price}}</p>
         </div>
       </div> -->
-    <PhotoModal :currentMaster="currentMaster"/>
+    <PhotoModal v-if="visiblePhoto" :currentMaster="currentMaster"/>
 
       <div class="registration">
         <div class="registration__title">Онлайн запись</div>
-        <iframe height="900px" width="320px" scrolling="no" frameborder="0" allowtransparency="true" id="ms_booking_iframe" src="https://n1163728.yclients.com"></iframe>
+        <iframe height="500px" width="320px" scrolling="yes" frameborder="0" allowtransparency="true" id="ms_booking_iframe" src="https://n1163728.yclients.com"></iframe>
       </div>
     </div>
     <div v-else>Loading</div>
@@ -31,6 +31,7 @@ import PhotoModal from '@/components/modals/PhotoModal.vue';
 
 interface Data {
     test: any;
+    visiblePhoto: boolean;
 }
 
 
@@ -43,7 +44,8 @@ export default Vue.extend({
 
    data(): Data {
         return {
-          test: null
+          test: null,
+          visiblePhoto: false
         };
     },
 
@@ -74,6 +76,9 @@ export default Vue.extend({
         console.error("Error loading image:", error);
         return '';
       }
+    },
+    displayPhoto() {
+      this.visiblePhoto = !this.visiblePhoto;
     }
   },
   mounted() {
