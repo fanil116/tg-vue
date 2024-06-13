@@ -43,7 +43,7 @@ const PhotoModal = Vue.extend({
      methods: {
     getImagePath(image: string): string {
       try {
-        return `/tg-vue/assets/img${image}`;
+        return `/tg-vue/img${image}`;
       } catch (error) {
         console.error("Error loading image:", error);
         return '';
