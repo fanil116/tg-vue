@@ -10,37 +10,117 @@ const state = (): State => ({
                 {
                     name: "Стрелка с растушёвкой",
                     price: 10000,
-                    img: "/ekaterina/strelka.jpg"
+                    img: "/ekaterina/price/strelka/strelka.jpg",
+                    slider: [
+                        {
+                            src: "/ekaterina/price/strelka/strelka.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/strelka/one.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/strelka/two.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/strelka/three.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/strelka/four.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Брови волосковая",
                     price: 10000,
-                    img: "/ekaterina/brovi-volos.jpg"
+                    img: "/ekaterina/price/brovi-volos/brovi-volos.jpg",
+                    slider: [
+                        {
+                            src: "/ekaterina/price/brovi-volos/brovi-volos.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/brovi-volos/one.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/brovi-volos/two.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Брови",
                     price: 10000,
-                    img: "/ekaterina/brovi.jpg"
+                    img: "/ekaterina/price/brovi/brovi.jpg",
+                    slider: [
+                        {
+                            src: "/ekaterina/price/brovi/brovi.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/brovi/one.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/brovi/two.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/brovi/three.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Стрелка",
                     price: 6500,
-                    img: "/ekaterina/streka-2.jpg"
+                    img: "/ekaterina/price/strelka-2/strelka-2.jpg",
+                    slider: [
+                        {
+                            src: "/ekaterina/price/strelka-2./strelka-2.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Межресничка",
                     price: 5000,
-                    img: "/ekaterina/mejresnica.jpg"
+                    img: "/ekaterina/price/mejresnica/mejresnica.jpg",
+                    slider: [
+                        {
+                            src: "/ekaterina/price/mejresnica/mejresnica.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/mejresnica/one.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/mejresnica/two.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Губы",
                     price: 10000,
-                    img: "/ekaterina/gubi.jpg"
+                    img: "/ekaterina/price/gubi/gubi.jpg",
+                    slider: [
+                        {
+                            src: "/ekaterina/price/gubi/gubi.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/gubi/one.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/gubi/two.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/gubi/three.jpg"
+                        },
+                        {
+                            src: "/ekaterina/price/gubi/four.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Удаление",
                     price: 10000,
-                    img: "/ekaterina/delete.jpg"
+                    img: "/ekaterina/price/delete/delete.jpg",
+                    slider: [
+                        {
+                            src: "/ekaterina/price/delete/delete.jpg"
+                        },
+                    ]
                 },
             ],
             works: [
@@ -80,7 +160,7 @@ const state = (): State => ({
                 {
                     src: "/ekaterina/photo_work/twelve.jpg"
                 }
-            ]
+            ],
         },
         {
             id:2,
@@ -91,17 +171,59 @@ const state = (): State => ({
                 {
                     name: "Межресничка",
                     price: 5000,
-                    img: "/ilnara/mejresnica.jpg"
+                    img: "/ilnara/price/mejresnica.jpg",
+                    slider: [
+                        {
+                            src: "/ilnara/price/mejresnica/mejresnica.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/mejresnica/one.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Губы",
                     price: 8000,
-                    img: "/ilnara/gubi.jpg"
+                    img: "/ilnara/price/gubi.jpg",
+                    slider: [
+                        {
+                            src: "/ilnara/price/gubi/gubi.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/gubi/one.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/gubi/two.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/gubi/three.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/gubi/four.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Брови",
                     price: 8000,
-                    img: "/ilnara/brovi.jpg"
+                    img: "/ilnara/price/brovi.jpg",
+                    slider: [
+                        {
+                            src: "/ilnara/price/brovi/brovi.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/brovi/one.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/brovi/two.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/brovi/three.jpg"
+                        },
+                        {
+                            src: "/ilnara/price/brovi/four.jpg"
+                        },
+                    ]
                 },
             ],
             works: [
@@ -152,12 +274,40 @@ const state = (): State => ({
                 {
                     name: "Губы",
                     price: 4500,
-                    img: "/luiza/gubi.jpg"
+                    img: "/luiza/price/gubi/gubi.jpg",
+                    slider: [
+                        {
+                            src: "/luiza/price/gubi/gubi.jpg"
+                        },
+                        {
+                            src: "/luiza/price/gubi/one.jpg"
+                        },
+                        {
+                            src: "/luiza/price/gubi/two.jpg"
+                        },
+                        {
+                            src: "/luiza/price/gubi/three.jpg"
+                        },
+                    ]
                 },
                 {
                     name: "Брови",
                     price: 4500,
-                    img: "/luiza/brovi.jpg"
+                    img: "/luiza/price/brovi/brovi.jpg",
+                    slider: [
+                        {
+                            src: "/luiza/price/brovi/brovi.jpg"
+                        },
+                        {
+                            src: "/luiza/price/brovi/one.jpg"
+                        },
+                        {
+                            src: "/luiza/price/brovi/two.jpg"
+                        },
+                        {
+                            src: "/luiza/price/brovi/three.jpg"
+                        },
+                    ]
                 },
             ],
             works: [

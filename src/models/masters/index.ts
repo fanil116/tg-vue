@@ -11,6 +11,7 @@ export interface Services {
     name: string;
     price: number;
     img: string;
+    slider: Photo[]
 }
 
 export interface Photo {

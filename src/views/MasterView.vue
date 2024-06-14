@@ -2,18 +2,20 @@
   <div>
     <div v-if="currentMaster">
       <div :class="currentMaster.fullClass" class="masters__full"></div>
-      <button>Прайс - {{currentMaster.name}}</button>
-      <button @click="displayPhoto">Фото работ</button>
+      <button @click="showPrice">Прайс - {{currentMaster.name}}</button>
+      <button @click="showPhoto">Фото работ</button>
       <p>{{test}}</p>
-      <!--<div class="masters__price price">
+      <div v-if="visiblePrice" class="masters__price price">
         <div v-for="(service, index) in currentMaster.services" :key="index">
-          <img :src="getImagePath(service.img)" class="price__img" />
-          <p class="price__name">{{service.name}}</p>
-          <p class="price__price">{{service.price}}</p>
+          <div @click="showCurrentWork(service)" class="price__wrapper">
+            <img :src="getImagePath(service.img)" class="price__img" />
+            <p class="price__name">{{service.name}}</p>
+            <p class="price__price">{{service.price}} ₽</p>
+          </div>
         </div>
-      </div> -->
+      </div>
     <PhotoModal v-if="visiblePhoto" :currentMaster="currentMaster"/>
-
+    <CurrentWork :currentWork="currentWork"/>
       <div class="registration">
         <div class="registration__title">Онлайн запись</div>
         <iframe height="500px" width="320px" scrolling="yes" frameborder="0" allowtransparency="true" id="ms_booking_iframe" src="https://n1163728.yclients.com"></iframe>
@@ -26,12 +28,14 @@
 <script lang="ts">
 import Vue from "vue";
 import { MastersStoreModule, GetterType as MastersGetterType,} from "@/store/masters/types/MastersStoreModule";
-import type {Master} from "@/models/masters"
+import type {Master, Services} from "@/models/masters"
 import PhotoModal from '@/components/modals/PhotoModal.vue';
-
+import CurrentWork from '@/components/modals/CurrentWork.vue';
 interface Data {
     test: any;
     visiblePhoto: boolean;
+    visiblePrice: boolean;
+    currentWork: Services | null;
 }
 
 
@@ -40,12 +44,15 @@ export default Vue.extend({
 
   components: {
       PhotoModal,
+      CurrentWork
     },
 
    data(): Data {
         return {
           test: null,
-          visiblePhoto: false
+          visiblePhoto: false,
+          visiblePrice: false,
+          currentWork: null
         };
     },
 
@@ -71,14 +78,22 @@ export default Vue.extend({
   methods: {
     getImagePath(image: string): string {
       try {
-        return `/tg-vue/src/assets/img/${image}`;
+        return `/tg-vue/img/${image}`;
       } catch (error) {
         console.error("Error loading image:", error);
         return '';
       }
     },
-    displayPhoto() {
+    showPhoto() {
       this.visiblePhoto = !this.visiblePhoto;
+      if (this.visiblePhoto) this.visiblePrice = false
+    },
+    showPrice() {
+      this.visiblePrice = !this.visiblePrice;
+      if (this.visiblePrice) this.visiblePhoto = false
+    },
+    showCurrentWork(service: Services) {
+      this.currentWork = service;
     }
   },
   mounted() {

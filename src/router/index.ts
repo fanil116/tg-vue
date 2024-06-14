@@ -26,7 +26,7 @@ const router = new VueRouter({
       name: 'MasterView',
       component: MasterView,
       props: true // Разрешаем передавать параметры маршрута как пропсы в компонент
-      },
+    },
   ]
 })
 

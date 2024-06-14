@@ -99,10 +99,15 @@
 }
 
 .price {
-  display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 8px;
     padding: 0 24px;
+
+  &__wrapper {
+    height:100%;
+    cursor: pointer;
+  }
 
   &__img {
     max-height: 170px;
