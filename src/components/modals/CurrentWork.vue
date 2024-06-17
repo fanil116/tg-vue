@@ -21,6 +21,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Flicking } from "@egjs/vue-flicking";
+import type { Photo } from "@/models/masters"
 interface Data {
     options: any;
 }
