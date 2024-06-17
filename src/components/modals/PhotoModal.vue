@@ -22,7 +22,7 @@ interface Data {
 const PhotoModal = Vue.extend({
     name: "PhotoModal",
     components: {
-    Flicking: Flicking
+        Flicking: Flicking
     },
     props: {
         currentMaster: {

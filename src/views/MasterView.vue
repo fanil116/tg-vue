@@ -15,7 +15,7 @@
         </div>
       </div>
     <PhotoModal v-if="visiblePhoto" :currentMaster="currentMaster"/>
-    <CurrentWork :currentWork="currentWork"/>
+    <CurrentWork v-if="visibleCurrentWork" @close="close" :currentWork="currentWork"/>
       <div class="registration">
         <div class="registration__title">Онлайн запись</div>
         <iframe height="500px" width="320px" scrolling="yes" frameborder="0" allowtransparency="true" id="ms_booking_iframe" src="https://n1163728.yclients.com"></iframe>
@@ -36,6 +36,7 @@ interface Data {
     visiblePhoto: boolean;
     visiblePrice: boolean;
     currentWork: Services | null;
+    visibleCurrentWork: boolean;
 }
 
 
@@ -52,7 +53,8 @@ export default Vue.extend({
           test: null,
           visiblePhoto: false,
           visiblePrice: false,
-          currentWork: null
+          currentWork: null,
+          visibleCurrentWork: false
         };
     },
 
@@ -94,6 +96,10 @@ export default Vue.extend({
     },
     showCurrentWork(service: Services) {
       this.currentWork = service;
+      this.visibleCurrentWork = true;
+    },
+    close() {
+      this.visibleCurrentWork = false;
     }
   },
   mounted() {
