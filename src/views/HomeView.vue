@@ -7,7 +7,8 @@
 <script lang="ts">
 import Vue from "vue";
 import TheWelcome from '@/components/TheWelcome.vue';
-import axios from 'axios';
+import { MastersStoreModule, ActionType as MastersActionType,} from "@/store/masters/types/MastersStoreModule";
+
 interface Data {
     name: string;
     email: string;
@@ -45,16 +46,13 @@ export default Vue.extend({
         this.registerUser();
   },
   methods: {
-    async registerUser() {
-      try {
-        const response = await axios.post('http://127.0.0.1:5000/register', {
-          username: this.user.user.username,
-          id: this.user.user.id,
-        });
-        this.responseMessage = `Your referral code: ${response.data.referral_code}`;
-      } catch (error) {
-        this.responseMessage = 'Error registering user: ' + error.response.data.error;
-      }
+    registerUser() {
+      console.log("asd");
+      MastersStoreModule.dispatch(
+                    this.$store,
+                    MastersActionType.TEST,
+                    this.user
+                );
     },
   },
   beforeDestroy() {
