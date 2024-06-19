@@ -17,7 +17,7 @@ export default defineConfig({
       ]
     })
   ],
-  base: '/tg-vue/',
+  base: '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
