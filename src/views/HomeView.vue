@@ -47,7 +47,6 @@ export default Vue.extend({
   },
   methods: {
     registerUser() {
-      console.log("asd");
       MastersStoreModule.dispatch(
                     this.$store,
                     MastersActionType.TEST,

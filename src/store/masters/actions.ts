@@ -15,6 +15,8 @@ const actions = {
             console.log(error);
             console.log('Error registering user: ' + error.response.data.error);
           } */
+         console.log("SSSS");
+         
         console.log(user);
           axios.get('https://sitovaminiapps.ru/api.php')
           .then(response => {
