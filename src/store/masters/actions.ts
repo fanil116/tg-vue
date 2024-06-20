@@ -4,9 +4,9 @@ const actions = {
     async [ActionType.TEST](
         user: any
     ) {
-        try {
+        /* try {
             console.log(user);
-            const response = await axios.post('http://127.0.0.1:5000/register', {
+            const response = await axios.post('https://sitovaminiapps.ru/api.php', {
                 name: 'test',
                 account_id: '1',
             });
@@ -14,7 +14,15 @@ const actions = {
           } catch (error: any) {
             console.log(error);
             console.log('Error registering user: ' + error.response.data.error);
-          }
+          } */
+        console.log(user);
+          axios.get('https://sitovaminiapps.ru/api.php')
+          .then(response => {
+            console.log(response);
+          })
+          .catch(error => {
+            console.log(error);
+          });
     },
 };
 export default actions;
