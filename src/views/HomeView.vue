@@ -7,8 +7,8 @@
 <script lang="ts">
 import Vue from "vue";
 import TheWelcome from '@/components/TheWelcome.vue';
-import { MastersStoreModule, ActionType as MastersActionType,} from "@/store/masters/types/MastersStoreModule";
-
+/* import { MastersStoreModule, ActionType as MastersActionType,} from "@/store/masters/types/MastersStoreModule";
+ */
 interface Data {
     name: string;
     email: string;
@@ -43,15 +43,30 @@ export default Vue.extend({
         });	
         Telegram.WebApp.MainButton.show();
         this.user = Telegram.WebApp.initDataUnsafe
-        this.registerUser();
+        this.checkUser();
   },
   methods: {
-    registerUser() {
+    /* registerUser() {
       MastersStoreModule.dispatch(
-                    this.$store,
-                    MastersActionType.TEST,
-                    this.user
-                );
+        this.$store,
+        MastersActionType.REGISTER_USER,
+        this.user
+      );
+    }, */
+    /* fetchUser() {
+      MastersStoreModule.dispatch(
+        this.$store,
+        MastersActionType.FETCH_USER,
+        this.user
+      );
+    }, */
+    checkUser() {
+      this.$store.dispatch('masters/checkUser', this.user);
+      /* MastersStoreModule.dispatch(
+        this.$store,
+        MastersActionType.CHECK_USER,
+        this.user
+      ); */
     },
   },
   beforeDestroy() {

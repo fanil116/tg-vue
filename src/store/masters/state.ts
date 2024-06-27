@@ -349,6 +349,7 @@ const state = (): State => ({
                 }
             ]
         }],
+    users: null
 });
 
 export type MasterState = ReturnType<typeof state>;

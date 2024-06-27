@@ -20,4 +20,5 @@ export interface Photo {
 
 export interface State {
     masters: Master[];
+    users: any;
 }

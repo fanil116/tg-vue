@@ -3,6 +3,5 @@
  */
 
 export enum MutationType {
-    SET_CONFIG_APP = "SET_CONFIG_APP",
-
+    SET_USERS = "SET_USERS"
 }
