@@ -7,8 +7,8 @@
 <script lang="ts">
 import Vue from "vue";
 import TheWelcome from '@/components/TheWelcome.vue';
-/* import { MastersStoreModule, ActionType as MastersActionType,} from "@/store/masters/types/MastersStoreModule";
- */
+import { MastersStoreModule, ActionType as MastersActionType,} from "@/store/masters/types/MastersStoreModule";
+
 interface Data {
     name: string;
     email: string;
