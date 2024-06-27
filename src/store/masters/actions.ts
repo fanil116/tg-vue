@@ -9,7 +9,7 @@ const actions: ActionTree<State, RootState> = {
         console.log("register user");
         axios.post('https://sitovaminiapps.ru/api.php', {
             name: user.user.username,
-            account_id: user.user.id,
+            account_id: String(user.user.id),
             referred_by_code: "test"
           })
           .then(response => {
