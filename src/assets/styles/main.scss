@@ -183,6 +183,11 @@ a,
   left: 10px;
   z-index: 3;
 }
+.navigation {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
 .left {
   transform: rotate(135deg);

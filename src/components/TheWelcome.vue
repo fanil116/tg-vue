@@ -4,7 +4,7 @@
   <div class="main_banner"></div>
       <div class="wrapper">
         <HelloWorld msg="Перманентный макияж Казань" />
-        <nav>
+        <nav class="navigation">
           <router-link to="/">Главная</router-link>
           <router-link to="/about">Отзывы</router-link>
           <router-link to="/about">Прайс</router-link>
