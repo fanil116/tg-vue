@@ -61,12 +61,13 @@ export default Vue.extend({
       );
     }, */
     checkUser() {
-      this.$store.dispatch('masters/checkUser', this.user);
-      /* MastersStoreModule.dispatch(
+      console.log("check")
+      /* this.$store.dispatch('masters/checkUser', this.user); */
+      MastersStoreModule.dispatch(
         this.$store,
         MastersActionType.CHECK_USER,
         this.user
-      ); */
+      );
     },
   },
   beforeDestroy() {

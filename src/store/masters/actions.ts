@@ -7,7 +7,7 @@ const actions: ActionTree<State, RootState> = {
     async [ActionType.REGISTER_USER]({ commit }, user: any): Promise<void> {
         console.log(commit)
         console.log("register user");
-        axios.post('http://sitovaminiapps.ru/api.php', {
+        axios.post('https://sitovaminiapps.ru/api.php', {
             name: user.user.username,
             account_id: user.user.id,
             referred_by_code: "test"
@@ -43,7 +43,7 @@ const actions: ActionTree<State, RootState> = {
         console.log("CHECK_USER");
         console.log(user);
         const id = user.user.id;
-        axios.post('http://sitovaminiapps.ru/api.php', { id})
+        axios.post('https://sitovaminiapps.ru/api.php', { id})
         .then(response => {
           if (response.data.success && response.data.user) {
             console.log('User exists:', response.data.user);
