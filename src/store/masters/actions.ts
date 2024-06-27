@@ -7,6 +7,8 @@ const actions: ActionTree<State, RootState> = {
     async [ActionType.REGISTER_USER]({ commit }, user: any): Promise<void> {
         console.log(commit)
         console.log("register user");
+        console.log(user);
+        console.log(String(user.user.id));
         axios.post('https://sitovaminiapps.ru/api.php', {
             name: user.user.username,
             account_id: String(user.user.id),
