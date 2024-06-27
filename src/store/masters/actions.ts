@@ -10,9 +10,9 @@ const actions: ActionTree<State, RootState> = {
         console.log(user);
         console.log(String(user.user.id));
         axios.post('https://sitovaminiapps.ru/api.php', {
-            name: user.user.username,
-            account_id: String(user.user.id),
-            referred_by_code: "test"
+            "name": user.user.username,
+            "account_id": String(user.user.id),
+            "referred_by_code": "test"
           })
           .then(response => {
             if (response.data.success) {
