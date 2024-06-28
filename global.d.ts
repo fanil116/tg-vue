@@ -11,6 +11,7 @@ declare global {
         MainButton: any;
         initDataUnsafe: any;
         BackButton: any;
+        openTelegramLink: (string) => void;
         // Добавьте другие методы и свойства, которые вы используете
       }
   
