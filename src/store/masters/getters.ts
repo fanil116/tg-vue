@@ -7,5 +7,8 @@ export default {
     [GetterType.GET_MASTERS](state: MasterState): any {
         return state.masters;
     },
+    [GetterType.GET_USERS](state: MasterState): any {
+        return state.users;
+    },
 
 };

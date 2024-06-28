@@ -47,11 +47,18 @@ export default Vue.extend({
                 MastersGetterType.GET_MASTERS
             );
         },
+        user(): any {
+            return MastersStoreModule.get<any>(
+                this.$store,
+                MastersGetterType.GET_USERS
+            );
+        },
 
     },
     methods: {
       shareLink() {
-        Telegram.WebApp.openTelegramLink('https://t.me/share/url?url=https://t.me/Pizza_apps_bot/testPizza?startapp=T7kgdst2')
+        const referralCode = this.user.referral_code;
+        Telegram.WebApp.openTelegramLink(`https://t.me/share/url?url=https://t.me/Pizza_apps_bot/testPizza?startapp=${referralCode}`)
       },
     }
 });

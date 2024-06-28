@@ -41,7 +41,7 @@ const actions: ActionTree<State, RootState> = {
           });
     },
     async [ActionType.CHECK_USER](
-        { dispatch },
+        { dispatch, commit },
         user: any
     ): Promise<void> {
         console.log("CHECK_USER");
@@ -52,6 +52,7 @@ const actions: ActionTree<State, RootState> = {
             account_id: id})
         .then(response => {
           if (response.data.success && response.data.user) {
+            commit(MutationType.SET_USERS, response.data.user);
             console.log('User exists:', response.data.user);
           } else {
             console.log('User does not exist, adding new user.');
