@@ -43,7 +43,10 @@ export default Vue.extend({
             Telegram.WebApp.showAlert('Не смотри еще не готово')
         });	
         Telegram.WebApp.MainButton.show();
-        this.user = Telegram.WebApp.initDataUnsafe
+        this.user = Telegram.WebApp.initDataUnsafe;
+        console.log(window.location.search);
+        console.log(window);
+        console.log("asd");
         this.checkUser();
   },
   methods: {
