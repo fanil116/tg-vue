@@ -33,6 +33,7 @@ export default Vue.extend({
     },
 
   mounted() {
+    console.log(window.location.search);
     console.log(Telegram);
 // Show main button
         Telegram.WebApp.MainButton.setParams({
