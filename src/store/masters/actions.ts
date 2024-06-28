@@ -10,6 +10,7 @@ const actions: ActionTree<State, RootState> = {
         console.log(user);
         console.log(String(user.user.id));
         axios.post('https://sitovaminiapps.ru/api.php', {
+            action: 'register',
             name: user.user.username,
             account_id: String(user.user.id),
             referred_by_code: ""
@@ -45,7 +46,9 @@ const actions: ActionTree<State, RootState> = {
         console.log("CHECK_USER");
         console.log(user);
         const id = user.user.id;
-        axios.post('https://sitovaminiapps.ru/api.php', { account_id: id})
+        axios.post('https://sitovaminiapps.ru/api.php', { 
+            action: 'check',
+            account_id: id})
         .then(response => {
           if (response.data.success && response.data.user) {
             console.log('User exists:', response.data.user);
