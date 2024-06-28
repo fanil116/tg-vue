@@ -9,11 +9,12 @@ const actions: ActionTree<State, RootState> = {
         console.log("register user");
         console.log(user);
         console.log(String(user.user.id));
+        const refId = user.start_param || "";
         axios.post('https://sitovaminiapps.ru/api.php', {
             action: 'register',
             name: user.user.username,
             account_id: String(user.user.id),
-            referred_by_code: ""
+            referred_by_code: refId
           })
           .then(response => {
             if (response.data.success) {
