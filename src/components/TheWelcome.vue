@@ -12,6 +12,7 @@
         </nav>
       </div>
   <h3 class="masters_title">В нашей студии 3 мастера</h3>
+  <button @click="shareLink()">Share ref link</button>
   <div class="masters__wrapper">
     <div v-for="master in masters" :key="master.id">
     <router-link :to="`/master/${master.id}`">
@@ -48,5 +49,10 @@ export default Vue.extend({
         },
 
     },
+    methods: {
+      shareLink() {
+        Telegram.WebApp.openTelegramLink('https://t.me/share/url?url=https://t.me/Pizza_apps_bot/testPizza?startapp=T7kgdst2')
+      },
+    }
 });
 </script>
